@@ -1,0 +1,24 @@
+.eventsPaginated {
+    width: 100%;
+}
+.eventsPaginated .eventsSectionSub {
+    margin: -0.5rem 0 1rem;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+.eventsPaginated .p-datatable {
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    background: var(--surface);
+}
+.eventsPaginated .p-datatable .p-datatable-thead > tr > th {
+    background: var(--primary-soft);
+    color: var(--text);
+    font-weight: 700;
+}
+.eventsPaginated .p-paginator {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+}
