@@ -1,0 +1,61 @@
+.errorPage {
+    min-height: calc(100vh - var(--nav-height));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1.5rem 4rem;
+}
+.errorPage .errorCode {
+    font-size: 6rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    margin: 0;
+    background: linear-gradient(90deg, #4f46e5, #7c3aed);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.errorPage h2 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text);
+}
+.errorPage p {
+    margin: 0 0 1.75rem;
+    color: var(--muted);
+    max-width: 28rem;
+}
+.errorPage .errorActions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.errorPage .errorBtn {
+    display: inline-block;
+    padding: 0.7rem 1.4rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    background: linear-gradient(180deg, #6366f1, var(--comp_color));
+    box-shadow: 0 8px 18px rgba(79, 70, 229, 0.28);
+    transition: transform .12s ease, box-shadow .15s ease;
+}
+.errorPage .errorBtn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 24px rgba(79, 70, 229, 0.34);
+}
+.errorPage .errorBtn.secondary {
+    color: var(--comp_color);
+    background: #fff;
+    border: 1.5px solid var(--border);
+    box-shadow: none;
+}
