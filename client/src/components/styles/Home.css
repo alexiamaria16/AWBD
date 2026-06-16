@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+.home {
+    --home_picture: url('../../assets/events_drawing.png');
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    color: var(--text);
+}
+
+/* Hero --------------------------------------------------------------- */
+.hero {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: var(--home_picture);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(1100px 480px at 50% -10%, rgba(99, 102, 241, 0.45), transparent 60%),
+        linear-gradient(180deg, rgba(17, 24, 39, 0.55), rgba(17, 24, 39, 0.78));
+}
+.hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    padding: 4.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.55rem;
+    color: #fff;
+}
+.hero-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: #c7d2fe;
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+}
+.hero h1 {
+    margin: 0.5rem 0 0;
+    font-size: clamp(2rem, 5.5vw, 3.6rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+    color: #fff;
+    text-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
+}
+.hero-sub {
+    margin: 0.5rem 0 0;
+    font-size: clamp(1rem, 2.2vw, 1.2rem);
+    color: rgba(255, 255, 255, 0.92);
+    max-width: 620px;
+    line-height: 1.6;
+}
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+/* Buttons ------------------------------------------------------------ */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.6rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform .12s ease, box-shadow .15s ease, background .2s ease;
+}
+.btn-primary {
+    color: #fff;
+    background: linear-gradient(180deg, #6366f1, var(--primary));
+    box-shadow: 0 10px 24px rgba(79, 70, 229, 0.40);
+}
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(79, 70, 229, 0.50);
+}
+.btn-ghost {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+}
+.btn-ghost:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.20);
+}
+
+/* Sections ----------------------------------------------------------- */
+.section {
+    width: 100%;
+    max-width: 1080px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+}
+.section-head {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 2.25rem;
+}
+.section-eyebrow {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.55rem;
+}
+.section-head h2 {
+    margin: 0 0 0.55rem;
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--text);
+}
+.section-head p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* Feature grid ------------------------------------------------------- */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+}
+.feature-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.6rem;
+    box-shadow: var(--shadow);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+.feature-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: var(--primary-soft);
+    color: var(--primary);
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+}
+.feature-card h3 {
+    margin: 0 0 0.45rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text);
+}
+.feature-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Testimonials ------------------------------------------------------- */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 1.25rem;
+}
+.testimonial-card {
+    margin: 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.6rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+.testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+.testimonial-card blockquote {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text);
+}
+.testimonial-card figcaption {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+.avatar {
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, #6366f1, #7c3aed);
+}
+.who {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+}
+.who-name {
+    font-weight: 700;
+    color: var(--text);
+}
+.who-role {
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+/* Calendar ----------------------------------------------------------- */
+.p-calendar {
+    width: 100%;
+    background: var(--surface);
+    padding: 1rem;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    position: relative;
+}
+.p-calendar .p-datepicker {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+}
+.p-calendar .p-datepicker table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0.4rem;
+}
+.p-calendar .p-datepicker table th {
+    text-align: center;
+    color: var(--muted);
+    font-weight: 700;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.5rem 0;
+}
+.p-calendar .p-datepicker table td {
+    padding: 0;
+    height: auto;
+}
+.p-calendar .p-datepicker table td > span {
+    min-height: 96px;
+    height: auto;
+    padding: 0;
+    display: flex;
+    border-radius: 12px;
+    overflow: visible;
+    transition: background-color .15s ease, box-shadow .15s ease;
+}
+.p-calendar .p-datepicker table td > span:hover {
+    background: var(--primary-soft);
+}
+.p-calendar .p-datepicker table td.p-datepicker-today > span {
+    box-shadow: inset 0 0 0 2px var(--primary);
+}
+.calCell {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0.25rem;
+    border-radius: 12px;
+}
+.calCellHas {
+    background: var(--primary-soft);
+    box-shadow: inset 0 0 0 1.5px rgba(79, 70, 229, 0.22);
+}
+.calDay {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1;
+}
+.calCellHas .calDay {
+    color: var(--primary);
+    font-weight: 700;
+}
+.calBadge {
+    align-self: center;
+    font-size: 0.55rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(180deg, #6366f1, var(--primary));
+    padding: 2px 7px;
+    border-radius: 8px;
+    max-width: 100%;
+    box-shadow: 0 2px 6px rgba(79, 70, 229, 0.3);
+}
+.calendarLegend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.9rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+.calLegendDot {
+    flex: 0 0 auto;
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+    background: var(--primary-soft);
+    box-shadow: inset 0 0 0 1.5px rgba(79, 70, 229, 0.22);
+    display: inline-block;
+}
+
+/* Responsive --------------------------------------------------------- */
+@media (max-width: 800px) {
+    .hero { min-height: 52vh; }
+    .hero-inner { padding: 3.5rem 1.25rem; }
+    .section { margin: 3rem auto; padding: 0 1rem; }
+    .p-calendar { padding: 0.5rem; }
+    .p-calendar .p-datepicker table { border-spacing: 0.25rem; }
+    .p-calendar .p-datepicker table td > span { min-height: 78px; }
+    .calCell { padding: 0.3rem 0.15rem; gap: 0.25rem; }
+    .calDay { font-size: 0.95rem; }
+    .calBadge { font-size: 0.5rem; padding: 1px 5px; }
+}
