@@ -1,0 +1,89 @@
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+    padding: 2rem 1rem;
+    background:
+        radial-gradient(800px 400px at 100% 0%, rgba(124, 58, 237, 0.25), transparent 60%),
+        linear-gradient(135deg, #4f46e5, #6d28d9);
+}
+.contact form {
+    max-width: 600px;
+    width: 100%;
+    background: var(--surface);
+    padding: 2rem 2rem 2.25rem;
+    border-radius: 18px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    margin: 25px;
+}
+.contact form h2 {
+    font-size: 1.9rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: var(--comp_color);
+    margin-bottom: 0.5rem;
+}
+.contact form .input-box {
+    margin-top: 1.1rem;
+}
+.input-box .field {
+    width: 100%;
+    height: 48px;
+    margin-top: 8px;
+    background: #fff;
+    border: 1.5px solid var(--border);
+    outline: none;
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 1rem;
+    color: var(--text);
+    transition: border-color .15s ease, box-shadow .15s ease;
+}
+.input-box label {
+    display: block;
+    font-weight: 600;
+    color: var(--text);
+}
+.input-box .field-mess {
+    height: 180px;
+    width: 100%;
+    resize: vertical;
+    margin-top: 8px;
+    padding: 12px 14px;
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    font-size: 1rem;
+    color: var(--text);
+    transition: border-color .15s ease, box-shadow .15s ease;
+}
+.input-box .field:focus,
+.input-box .field-mess:focus {
+    border-color: var(--comp_color);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.18);
+}
+.contact form button {
+    width: 100%;
+    height: 52px;
+    background: linear-gradient(180deg, #6366f1, var(--comp_color));
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 8px 18px rgba(79, 70, 229, 0.28);
+    cursor: pointer;
+    font-size: 1.05rem;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    transition: transform .12s ease, box-shadow .15s ease, background .2s ease;
+}
+.contact form button:hover {
+    background: linear-gradient(180deg, var(--comp_color), var(--primary-hover));
+    transform: translateY(-1px);
+    box-shadow: 0 12px 24px rgba(79, 70, 229, 0.34);
+}
+.contact form button:active {
+    transform: translateY(0);
+}
