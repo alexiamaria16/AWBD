@@ -1,0 +1,102 @@
+.formContainer {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 5vh 1rem 3rem;
+}
+.formContainer h2 {
+    font-size: 1.9rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--comp_color);
+    margin-bottom: 1.75rem;
+    text-align: center;
+}
+.login-container {
+    width: 100%;
+    max-width: 480px;
+    padding: 0;
+}
+.p-card {
+    background-color: var(--surface);
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-lg);
+    width: 100% !important;
+}
+.p-card .p-card-content {
+    padding: 2rem !important;
+}
+.p-inputtext {
+    width: 100%;
+    padding: 0.8rem 0.9rem !important;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: var(--text);
+    background: #fff;
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    transition: border-color .15s ease, box-shadow .15s ease;
+}
+.p-inputtext:hover {
+    border-color: #c7cad1;
+}
+.p-inputtext:enabled:focus,
+.p-inputtext:focus {
+    border-color: var(--comp_color);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.18);
+    outline: none;
+}
+.p-float-label {
+    margin: 2rem 0;
+    width: 100%;
+}
+.p-float-label label {
+    margin-left: 0.4rem;
+    top: 1rem !important;
+    color: var(--muted);
+}
+.p-float-label input:focus ~ label,
+.p-float-label input.p-filled ~ label {
+    top: -1.2rem !important;
+    left: 0.6rem !important;
+    font-size: 0.8rem !important;
+    color: var(--comp_color) !important;
+    font-weight: 600;
+}
+.p-button {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.8rem !important;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(180deg, #6366f1, var(--comp_color));
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 8px 18px rgba(79, 70, 229, 0.28);
+    transition: transform .12s ease, box-shadow .15s ease, background .2s ease;
+}
+.p-button:hover {
+    background: linear-gradient(180deg, var(--comp_color), var(--primary-hover)) !important;
+    border-color: var(--primary-hover) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 12px 24px rgba(79, 70, 229, 0.34);
+}
+.p-button:active {
+    transform: translateY(0);
+}
+.p-message {
+    margin: 1rem 0;
+    width: 100%;
+    border-radius: 10px;
+}
+@media screen and (max-width: 580px) {
+    .p-card .p-card-content {
+        padding: 1.25rem !important;
+    }
+    .formContainer h2 {
+        font-size: 1.6rem;
+    }
+}
