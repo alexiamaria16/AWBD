@@ -1,0 +1,173 @@
+@import './LoginForm.css';
+
+/* Page wrapper: fill the space under the sticky navbar and center the content,
+   with comfortable (not cavernous) padding. */
+.organizerDashboard {
+    min-height: calc(100vh - var(--nav-height));
+    padding: 2.5rem 1.5rem 4rem;
+}
+
+.organizerDashboard .dashboardHeader {
+    max-width: 1080px;
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+.organizerDashboard .dashboardHeader h1 {
+    margin: 0 0 0.4rem;
+    font-size: 2.1rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--comp_color);
+}
+.organizerDashboard .dashboardHeader p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 1rem;
+}
+
+/* Layout: the Events & Participants list is the hero on the left (sticky, so it
+   stays in view while the forms scroll); the Add / Edit / Delete action cards
+   stack in a sidebar on the right. */
+.organizerDashboard .dashboardGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    gap: 1.5rem;
+    max-width: 1120px;
+    margin: 0 auto;
+    align-items: start;
+}
+.organizerDashboard .eventsColumn {
+    position: sticky;
+    top: calc(var(--nav-height) + 1rem);
+    min-width: 0;
+}
+.organizerDashboard .actionsColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-width: 0;
+}
+
+@media (max-width: 860px) {
+    .organizerDashboard .dashboardGrid {
+        grid-template-columns: 1fr;
+    }
+    .organizerDashboard .eventsColumn {
+        position: static;
+    }
+}
+
+/* Neutralize the old absolute/transform hacks; cards size to their content. */
+.organizerDashboard .registerContainer,
+.organizerDashboard .formContainer,
+.organizerDashboard .login-container {
+    height: auto;
+}
+.organizerDashboard .formContainer {
+    position: static;
+    transform: none;
+    top: auto;
+    left: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.organizerDashboard .login-container {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+}
+.organizerDashboard .p-card {
+    width: 100% !important;
+}
+
+/* Tighten the generous default field rhythm so the forms read as compact,
+   not sparse. */
+.organizerDashboard .p-card .p-card-content {
+    padding: 1.75rem !important;
+}
+.organizerDashboard .p-float-label {
+    margin: 1.5rem 0;
+}
+
+/* Events & Participants list: fills the hero card; its height tracks the
+   viewport so the sticky column stays fully on screen, scrollable. */
+.organizerDashboard .p-listbox {
+    width: 100%;
+}
+.organizerDashboard .p-message {
+    width: 100%;
+}
+.organizerDashboard .p-listbox .p-listbox-list {
+    max-height: calc(100vh - var(--nav-height) - 13rem) !important;
+    overflow-y: auto;
+}
+
+/* The app doesn't load PrimeFlex, so the utility classes that used to space the
+   list template are inert. Style each item explicitly so multi-line content
+   lays out as a block (auto height, wrapping) instead of overlapping. */
+.organizerDashboard .p-listbox .p-listbox-item {
+    display: block;
+    width: 100%;
+    padding: 0;
+    white-space: normal;
+    line-height: 1.4;
+}
+.organizerDashboard .p-listbox .p-listbox-item + .p-listbox-item {
+    border-top: 1px solid var(--border);
+}
+.organizerDashboard .event-item {
+    padding: 1rem 1.25rem;
+    word-break: break-word;
+}
+.organizerDashboard .event-title {
+    margin: 0 0 0.25rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+.organizerDashboard .event-start {
+    margin: 0 0 0.75rem;
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+.organizerDashboard .participants-heading {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.organizerDashboard .participants-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.organizerDashboard .participant-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.25rem 0;
+    font-size: 0.85rem;
+}
+.organizerDashboard .participant-email {
+    color: #6b7280;
+    word-break: break-all;
+}
+.organizerDashboard .participants-empty {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #9ca3af;
+}
+
+/* Dropdowns inside the dashboard cards */
+.organizerDashboard .p-dropdown {
+    width: 100%;
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+}
+.organizerDashboard .p-dropdown:not(.p-disabled):hover {
+    border-color: #c7cad1;
+}
+.organizerDashboard .p-dropdown:not(.p-disabled).p-focus {
+    border-color: var(--comp_color);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.18);
+}
